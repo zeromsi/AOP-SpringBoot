@@ -16,7 +16,7 @@ public class Logging {
 	@Before("execution(* com.msi.service.demoService.get*(..))")
 	public void beforeGetMessage(JoinPoint joinPoint) {
 		CodeSignature codeSignature = (CodeSignature) joinPoint.getSignature();
-		System.out.println(joinPoint.getSignature().getName()+" is going to be called");
+		System.out.println(joinPoint.getSignature().getName()+" is about to be called");
 	}
 
 	@After("execution(* com.msi.service.demoService.*(..))")
